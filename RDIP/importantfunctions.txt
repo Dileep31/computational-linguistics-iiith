@@ -1,0 +1,7 @@
+important functions
+
+1.selectLanguage
+2.selectWords
+3.reformSentence
+4.CheckCorrectness
+5.DisplayPossibleAnswers
