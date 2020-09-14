@@ -1,8 +1,11 @@
 var startingvalue;
 var updatedvalue;
 var word;
+var checkarray = []
+var checkedarray1;
 $("#reset").hide();
 $("#correct").hide();
+
 const English = [
   [
     "John ate an apple before afternoon",
@@ -110,12 +113,11 @@ const Hindi = [[
   "है वहाँ एक बड़ी सी किताब",
   "है वहाँ बड़ी सी एक किताब",
 ] ];
-
 let Erandom,Hrandom;
-function funcio() {
+function funtio() {
   checkarray = [];
    checkedarray1 = "";
- selection = document.getElementById("SelectLanguage");
+ selection = document.getElementById("selectlang");
  let store = "";
   if (selection.value === "English") {
     document.getElementById("form_sentence").innerHTML =
@@ -145,7 +147,7 @@ function funcio() {
       store += temp;
       updatedvalue++;
     }
-    document.getElementById("btnval").innerHTML = 'store';
+    document.getElementById("btnval").innerHTML = store;
   }
   else if (selection.value === "Hindi") {
     checkarray = [];
