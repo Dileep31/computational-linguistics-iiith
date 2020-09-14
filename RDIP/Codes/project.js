@@ -1,3 +1,8 @@
+var startingvalue;
+var updatedvalue;
+var word;
+$("#reset").hide();
+$("#correct").hide();
 const English = [
   [
     "John ate an apple before afternoon",
@@ -106,23 +111,143 @@ const Hindi = [[
   "है वहाँ बड़ी सी एक किताब",
 ] ];
 
-function main()
-{
-  var value = document.getElementById("SelectLanguage").value;
-  if(value == "English")
-    document.getElementById("FormSentence").innerHTML =
+let Erandom,Hrandom;
+function funcio() {
+  checkarray = [];
+   checkedarray1 = "";
+ selection = document.getElementById("SelectLanguage");
+ let store = "";
+  if (selection.value === "English") {
+    document.getElementById("form_sentence").innerHTML =
       "<b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b>" +
       "</br>" +
       "<i>(select the buttons in proper order)</i>";
-    var random;
-    var random = Math.floor(Math.random()*English.length);
-    var randsentence=""
-    randsentence = English[random][0];
-    var array = []
-    array = randsentence.split(" ") ;
-    for(i = 0 ;i<array.length;i++)
-    {
-     document.getElementById("print").innerHTML = "<button id = "btn" >array[i]<buttom>";
+    Erandom = Math.floor(Math.random() * English.length);
+    document.getElementById("formed_sentence").innerHTML = " ";
+    document.getElementById("print").innerHTML = " ";
+    document.getElementById("reform").innerHTML = " ";
+    document.getElementById("check").innerHTML = "";
+    $("#reset").hide();
+    $("#correct").hide();
+    let Value = English[Erandom][0];
+    word = shuffle(Value);
+    startingvalue = 0;
+    updatedvalue = 0;
+    for (i = 0; i <= word.length - 1; i++) {
+       temp =
+        "<button  id='btn" +
+        i +
+        "' onclick='reply_click(this.id,this.value)' value='" +
+        word[i] +
+        "'>" +
+        word[i] +
+        "</button>  ";
+      store += temp;
+      updatedvalue++;
     }
+    document.getElementById("btnval").innerHTML = 'store';
+  }
+  else if (selection.value === "Hindi") {
+    checkarray = [];
+   checkedarray1 = "";
+    document.getElementById("form_sentence").innerHTML =
+      "<b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b>" +
+      "</br>" +
+      "<i>(select the buttons in proper order)</i>";
+    Hrandom = Math.floor(Math.random() * English.length);
+    document.getElementById("formed_sentence").innerHTML = " ";
+    document.getElementById("print").innerHTML = " ";
+    document.getElementById("reform").innerHTML = " ";
+    document.getElementById("check").innerHTML = "";
+    $("#reset").hide();
+    $("#correct").hide();
+    let Value = Hindi[Hrandom][0];
+    word = shuffle(Value);
+    startingvalue = 0;
+    updatedvalue = 0;
+    for (i = 0; i <= word.length - 1; i++) {
+       temp =
+        "<button  id='btn" +i +"' onclick='reply_click(this.id,this.value)' value='" +word[i] +
+      "'>" +
+        word[i] +
+        "</button>  ";
+      store += temp;
+      updatedvalue++;
+    }
+    document.getElementById("btnval").innerHTML = store;
+  }
+  else {
+    document.getElementById("form_sentence").innerHTML = "";
+    document.getElementById("val").innerHTML = "";
+    document.getElementById("formed_sentence").innerHTML = "";
+    document.getElementById("print").innerHTML = "";
+    document.getElementById("reform").innerHTML = "";
+    document.getElementById("check").innerHTML=""
+    $("#reset").hide();
+  }
+}
+function shuffle(sentence) {
+  var words = sentence.split(" ");
+  var j, x, i;
+  for (i = words.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = words[i];
+    words[i] = words[j];
+    words[j] = x;
+  }
+  return words;
+}
+function reply_click(clicked_id,clicked_value) {
+  document.getElementById("formed_sentence").innerHTML =
+    "<b>Formed Sentence</b>"+" <i>(after selecting words)</i>";
+  document.getElementById("print").innerHTML += clicked_value + " ";
+  $("#reset").show();
+  checkarray.push(clicked_value);
+  checkedarray1 = checkarray.join(" ")
     
+  document.getElementById(clicked_id).style.display = "none";
+  startingvalue++;
+  if(updatedvalue == startingvalue){
+    $("#correct").show()
+    
+    
+  //sentence=document.getElementById("print").innerHTML;
+  //alert(sentence);
+  }
+}
+function reformation() {
+   checkarray = [];
+   checkedarray1 = "";
+  for (i = 0; i <= word.length - 1; i++) {
+    document.getElementById("btn" + i).style.display = "";
+  }
+  document.getElementById("formed_sentence").innerHTML = "";
+  document.getElementById("print").innerHTML = "  ";
+  document.getElementById("reform").innerHTML = "";
+  document.getElementById("check").innerHTML = ""
+  document.getElementById('dileep').innerHTML = "";
+  startingvalue = 0;
+  $("#reset").hide();
+  $("#correct").hide()
+}
+function correctsent() 
+{
+  if (selection.value === "English"){
+  if (English[Erandom].includes(checkedarray1))
+  {
+    document.getElementById('dileep').innerHTML = "Correct answer" + "   "+checkedarray1;
+  }
+  else
+  {
+    document.getElementById('dileep').innerHTML = "WrongAnswer" + "   "+checkedarray1;
+  }}
+  if (selection.value === "Hindi"){
+  if (Hindi[Hrandom].includes(checkedarray1))
+  {
+    document.getElementById('dileep').innerHTML = "Correct answer" + "   "+checkedarray1;
+  }
+  else
+  {
+    document.getElementById('dileep').innerHTML = "WrongAnswer" + "   "+checkedarray1;
+  }}
 }

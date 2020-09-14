@@ -1,0 +1,64 @@
+
+<html>
+<head>
+	<title>
+		VIRTUAL LABS
+	</title>
+	<script type="text/javascript" src = "project.js"></script>
+	<link rel="stylesheet" type="text/css" href="project.css">
+</head>
+<body>
+	<div class = "main">
+		<div>
+			<img src="http://cl-iiith.vlabs.ac.in/images/logo.jpg">
+			<hr >
+			<p class = "sub"><b>COMPUTATIONAL LINGUISTICS LAB</b></p>
+			<div class = "sub"><a href = "#">HOME</a> > <a href="#">COMPUTATIONAL LINGUISTICS LAB</a> > <a href="#">FORMING SENTENCES</a></div>
+			<div class = "sub1" ><h1>Forming Sentences Part -2 </h1> </div>
+			<div class = "sub2" ><div class = "sub3"><a class = "sub1" href = "#">INTRODUCTION</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class = "sub1" href = "#">THEORY</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class = "sub1" href = "#">OBJECTIVE</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class = "sub1" href = "#">EXPERIMENT</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class = "sub1" href = "#">QUIZZES</a>&nbsp&nbsp&nbsp&nbsp&nbsp<a class = "sub1" href = "#">PROCEDURES</a></div>
+		<p style="font-size: 25px">EXPERIMENT</p>
+		 <div  id="lang" style="text-align: center;">
+    	<select id="SelectLanguage" onchange="main();">
+      	<option value="none">---Select Language---</option>
+      	<option value="English">English</option>
+      	<option value="Hindi">Hindi</option></select>
+    	<div ><p style="color: #0505c7;font-size: 20px;text-align: center;"
+      id="form_sentence"></p></div>
+      <div><p id="btnval"style= "font-size:15px ; padding:7px ; margin-right:10px ;"></p></div>
+    <div>
+      <p id="formed_sentence"style="color:#0505c7;text-align:center;font-size:25px;"></p>
+    </div>
+    <div>
+      <p id="print" style="text-align:center;font-size:30px;font-style:bold;opacity:.8"></p>
+    </div>
+    <div>
+      <p id="reform"></p><br>
+      <p id = 'dileep'></p>
+    </div>
+    <div>
+      <button id="reset" onclick="reformation();">Re-form the sentence</button>
+    </div>
+    <br>
+    <br>
+    <div>
+      <button id="correct" onclick="correctsent()">Check the correctness of this sentence
+      </button>
+    <div>
+      <p id="check"style="font-size:50px;"></p>
+    </div>
+    <div>
+      <button id="get_ans"onclick="get_answer()">Get Correct Sentence</button>
+    <button id="hide_ans"onclick="hide_answer()">Hide the correct answer</button>
+  </div>
+    <div>
+      <p id="print_ans"></p>
+    </div>
+    <script src="project.js"></script>
+  </body>
+</html>
+		</div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
