@@ -134,8 +134,8 @@ function funtio() {
     document.getElementById("reform").innerHTML = " ";
     document.getElementById("check").innerHTML = "";
     document.getElementById("print_ans").innerHTML = "";
-    document.getElementById('dileep1').innerHTML ="";
-    document.getElementById('dileep').innerHTML = "";
+    document.getElementById('dil1').innerHTML ="";
+    document.getElementById('dil').innerHTML = "";
     $("#reset").hide();
     $("#correct").hide();
     $("#get_ans").hide();
@@ -157,7 +157,7 @@ function funtio() {
       updatedvalue++;
     }
     document.getElementById("btnval").innerHTML = store;
-    document.getElementById('dileep').innerHTML ="";
+    document.getElementById('dil').innerHTML ="";
   }
   else if (selection.value === "Hindi") {
     checkarray = [];
@@ -171,9 +171,9 @@ function funtio() {
     document.getElementById("print").innerHTML = " ";
     document.getElementById("reform").innerHTML = " ";
     document.getElementById("check").innerHTML = "";
-    document.getElementById('dileep').innerHTML = "";
+    document.getElementById('dil').innerHTML = "";
     document.getElementById("print_ans").innerHTML = "";
-    document.getElementById('dileep1').innerHTML ="";
+    document.getElementById('dil1').innerHTML ="";
     
     $("#reset").hide();
     $("#correct").hide();
@@ -250,8 +250,8 @@ function reformation() {
   document.getElementById("print").innerHTML = "  ";
   document.getElementById("reform").innerHTML = "";
   document.getElementById("check").innerHTML = ""
-  document.getElementById('dileep').innerHTML = " ";
-  document.getElementById('dileep1').innerHTML = " ";
+  document.getElementById('dil').innerHTML = " ";
+  document.getElementById('dil1').innerHTML = " ";
   document.getElementById("print_ans").innerHTML = "";
   startingvalue = 0;
   $("#reset").hide();
@@ -266,20 +266,20 @@ function correctsent()
   if (selection.value === "English"){
   if (English[Erandom].includes(checkedarray1))
   {
-    document.getElementById('dileep').innerHTML = "Correct answer!!!";
+    document.getElementById('dil').innerHTML = "Correct answer!!!";
   }
   else
   {
-    document.getElementById('dileep1').innerHTML = "WrongAnswer!!!" ;
+    document.getElementById('dil1').innerHTML = "WrongAnswer!!!" ;
   }}
   if (selection.value === "Hindi"){
   if (Hindi[Hrandom].includes(checkedarray1))
   {
-    document.getElementById('dileep').innerHTML = "Correct answer!!!" ;
+    document.getElementById('dil').innerHTML = "Correct answer!!!" ;
   }
   else
   {
-    document.getElementById('dileep1').innerHTML = "WrongAnswer!!!";
+    document.getElementById('dil1').innerHTML = "WrongAnswer!!!";
   }}
 }
 function get_answer()
