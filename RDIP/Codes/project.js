@@ -266,7 +266,7 @@ function correctsent()
   }
   else
   {
-    document.getElementById('dileep').innerHTML = "WrongAnswer!!!" ;
+    document.getElementById('dileep1').innerHTML = "WrongAnswer!!!" ;
   }}
   if (selection.value === "Hindi"){
   if (Hindi[Hrandom].includes(checkedarray1))
