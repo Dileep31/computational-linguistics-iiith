@@ -1,0 +1,28 @@
+#formed_sentence{
+	color:#0505c7;
+	text-align:center;
+	font-size:25px;
+}
+#print{
+	text-align:center;
+	font-size:30px;
+	font-style:bold;
+	opacity:.8;
+}
+#dileep{
+	color:green;
+	font-size: 30px;
+}
+#dileep1{
+	color:red;
+	font-size:30px;
+}
+#main{
+	height:10000;
+	background-color: white;
+	margin-left: 170px;
+	margin-right: 170px;margin-bottom: 0px;
+}
+body{
+	background-color: white;
+}

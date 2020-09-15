@@ -1,90 +1,93 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Virtual Lab</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body style="background-color: #00004d;">
-    <div style="height:800;background-color: white;margin-left: 170px;margin-right: 170px;margin-bottom: 0px">
-    <header><div  >
-      <p class=title><img style="width:100%" src="http://cl-iiith.vlabs.ac.in/images/logo.jpg"></p>
-      <hr color="black">
-      <h2>COMPUTATIONAL LINGUSTICS LAB</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Virtual Lab</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="project.css">
+      </head>
+      <body >
+        <script src="project.js"></script></div>
+        <div id = "main" >
+        <header><div  >
+          <p class=title><img style="width:100%" src="http://cl-iiith.vlabs.ac.in/images/logo.jpg"></p>
+          <hr color="black">
+          <h2>COMPUTATIONAL LINGUSTICS LAB</h2>
 
-      <h4>home>Computational Linguistic Lab>Forming Sentence-2</h4>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Forming Sentences-2</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown" >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">INTRODUCTION</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">THEORY</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">OBJECTIVE</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">EXPERIMENT<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">QUIZZES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">PROCEDURE</a>
-            </li>
-          </ul>
+          <h4>home>Computational Linguistic Lab>Forming Sentence-2</h4>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Forming Sentences-2</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">INTRODUCTION</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">THEORY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">OBJECTIVE</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">EXPERIMENT<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">QUIZZES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PROCEDURE</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <p style="font-size: 40px; text-align: center;">Experiment</p3>
+        <div  id="lang" style="text-align: center;">
+        <select id="selectlang" onchange="funtio();">
+          <option value="none">---Select Language---</option>
+          <option value="English">English</option>
+          <option value="Hindi">Hindi</option>
         </div>
-      </nav>
-    </header>
-    <p style="font-size: 40px; text-align: center;">Experiment</p3>
-    <div  id="lang" style="text-align: center;">
-    <select id="selectlang" onchange="funtio();">
-      <option value="none">---Select Language---</option>
-      <option value="English">English</option>
-      <option value="Hindi">Hindi</option>
-    </div>
-    </select>
-    <div ><p style="color: #0505c7;font-size: 20px;text-align: center;"
-      id="form_sentence"></p></div>
-      <div><p id="btnval"style= "font-size:15px ; padding:7px ; margin-right:10px ;"></p></div>
-    <div>
-      <p id="formed_sentence"style="color:#0505c7;text-align:center;font-size:25px;"></p>
-    </div>
-    <div>
-      <p id="print" style="text-align:center;font-size:30px;font-style:bold;opacity:.8"></p>
-    </div>
-    <div>
-      <p id="reform"></p><br>
-      <p id = 'dileep'></p>
-    </div>
-    <div>
-      <button id="reset" onclick="reformation();">Re-form the sentence</button>
-    </div>
-    <br>
-    <br>
-    <div>
-      <button id="correct" onclick="correctsent()">Check the correctness of this sentence
-      </button>
-    <div>
-      <p id="check"style="font-size:50px;"></p>
-    </div>
-    <div>
-      <button id="get_ans"onclick="get_answer()">Get Correct Sentence</button>
-    <button id="hide_ans"onclick="hide_answer()">Hide the correct answer</button>
-  </div>
-    <div>
-      <p id="print_ans"></p>
-    </div>
-    <script src="project.js"></script></div>
-  </div>
-  </body>
-</html>
+        </select>
+        <div ><p style="color: #0505c7;font-size: 20px;text-align: center;"
+          id="form_sentence"></p></div>
+          <div><p id="btnval"style= "font-size:15px ; padding:7px ; margin-right:10px ;"></p></div>
+        <div>
+          <p id="formed_sentence"></p>
+        </div>
+        <div>
+          <p id="print"></p>
+        </div>
+        <div>
+          <p id="reform"></p><br>
+          
+        </div>
+        <div>
+          <button id="reset" onclick="reformation();">Re-form the sentence</button>
+        </div>
+        <br>
+        <br>
+        <div>
+          <button id="correct" onclick="correctsent()">Check the correctness of this sentence
+          </button>
+        <div>
+          <p id = 'dileep' ></p><p id = "dileep1" ></p>
+          <p id="check"style="font-size:50px;"></p>
+        </div>
+        <div>
+          <button id="get_ans"onclick="get_answer()">Get Correct Sentence</button>
+        <button id="hide_ans"onclick="hide_answer()">Hide the correct answer</button>
+      </div>
+        <div>
+          <p id="print_ans"></p>
+        </div>
+        <script src="project.js"></script></div>
+      </div><br><br><br><br><br>
+      </body>
+    </html>
