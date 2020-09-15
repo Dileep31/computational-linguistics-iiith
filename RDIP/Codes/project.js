@@ -134,6 +134,8 @@ function funtio() {
     document.getElementById("reform").innerHTML = " ";
     document.getElementById("check").innerHTML = "";
     document.getElementById("print_ans").innerHTML = "";
+    document.getElementById('dileep1').innerHTML ="";
+    document.getElementById('dileep').innerHTML = "";
     $("#reset").hide();
     $("#correct").hide();
     $("#get_ans").hide();
@@ -171,6 +173,8 @@ function funtio() {
     document.getElementById("check").innerHTML = "";
     document.getElementById('dileep').innerHTML = "";
     document.getElementById("print_ans").innerHTML = "";
+    document.getElementById('dileep1').innerHTML ="";
+    
     $("#reset").hide();
     $("#correct").hide();
     $("#get_ans").hide();
